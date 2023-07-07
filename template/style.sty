@@ -1,0 +1,7 @@
+% localization
+\RequirePackage{polyglossia}
+\setotherlanguages{german,english}
+\AtBeginDocument{\setmainlanguage{\@ample@Language}}
+
+\RequirePackage[strict,autostyle=true]{csquotes}
+\NewDocumentCommand\q{m}{\enquote{#1}}
