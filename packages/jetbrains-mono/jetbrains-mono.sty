@@ -1,0 +1,14 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{packages/jetbrains-mono/jetbrains-mono}[2023/07/00 The JetBrains Mono font.]
+
+\RequirePackage{fontspec}
+
+\setmonofont{JetBrainsMono}[
+  Path           = packages/jetbrains-mono/fonts/,
+  Extension      = .ttf,
+  UprightFont    = *-Regular,
+  ItalicFont     = *-Italic,
+  BoldFont       = *-Bold,
+  BoldItalicFont = *-BoldItalic,
+  Scale          = MatchLowercase,
+]
