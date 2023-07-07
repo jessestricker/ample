@@ -9,6 +9,7 @@
       "args": [
         "-synctex=1",
         "-interaction=nonstopmode",
+        "-halt-on-error",
         "-file-line-error",
         "-shell-escape",
         "-lualatex",
