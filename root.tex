@@ -1,8 +1,14 @@
 \documentclass[article,english]{template/ample}
 
+% used for example text
+\usepackage{blindtext}
+\renewcommand{\blindmarkup}[1]{\emph{#1}}
+
+% document metadata
 \title{The \emph{ample} template}
 \author{Jesse Stricker}
 
+% ==============================================================================
 \begin{document}
 
 \maketitle
@@ -15,5 +21,23 @@ Hello, \LaTeX.
 \section{Localization}
 
 Use can use \q{quotation marks} like this and \q{even \q{like} this}.
+
+\section{Font test}
+
+Show the main font, the \textsf{sans-serif} font and the \texttt{typewriter} font.
+
+\subsection{Main font}
+
+\blindtext{}
+
+\subsection{Sans-serif font}
+
+{\sffamily\blindtext{}}
+
+\subsection{Typewriter font}
+
+\begin{listing}[H]
+  \inputminted{rust}{code-snippet.rs}
+\end{listing}
 
 \end{document}
