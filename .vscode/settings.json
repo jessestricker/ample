@@ -1,6 +1,7 @@
 {
   "latex-workshop.latex.outDir": "out",
 
+  // compilation
   "latex-workshop.latex.recipe.default": "latexmk (LuaLaTeX)",
   "latex-workshop.latex.tools": [
     {
@@ -24,5 +25,14 @@
       "name": "latexmk (LuaLaTeX)",
       "tools": ["latexmk (LuaLaTeX)"]
     }
+  ],
+
+  // linting
+  "latex-workshop.linting.chktex.enabled": true,
+  "latex-workshop.linting.chktex.exec.args": [
+    "--quiet",
+    "--warnon=all", // warn for all violated checks
+    "--erroron=16", // error: Mathmode still on at end of LaTeX file.
+    "--nowarn=22" // disable: Comment displayed.
   ]
 }
