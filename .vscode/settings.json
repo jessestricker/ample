@@ -33,6 +33,7 @@
     "--quiet",
     "--warnon=all", // warn for all violated checks
     "--erroron=16", // error: Mathmode still on at end of LaTeX file.
-    "--nowarn=22" // disable: Comment displayed.
+    "--nowarn=22", // disable: Comment displayed.
+    "--nowarn=46" // disable: Use \( ... \) instead of $ ... $.
   ]
 }
