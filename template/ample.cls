@@ -13,5 +13,8 @@
 % load base class
 \LoadClass[12pt,a4paper]{\@ample@BaseClass}
 
-% load style package
-\RequirePackage{template/style}
+% load required packages
+\RequirePackage{template/packages}
+
+% define custom commands
+\RequirePackage{template/commands}
