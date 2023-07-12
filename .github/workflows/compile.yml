@@ -8,15 +8,15 @@ jobs:
     name: Compile
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Compile document
+      - name: Compile
         uses: xu-cheng/latex-action@v2
         with:
           root_file: root.tex
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
-      - name: Upload document
-        uses: actions/upload-artifact@v3
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          path: root.pdf
+          files: root.pdf
