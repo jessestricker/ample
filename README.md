@@ -2,6 +2,8 @@
 
 A LaTeX template with batteries included.
 
+[**👀 Preview 👀**](https://github.com/jessestricker/ample/releases/latest/download/root.pdf)
+
 ## Usage
 
 The best way to use this template is with the wonderful
