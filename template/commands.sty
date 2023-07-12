@@ -6,3 +6,22 @@
 
 % ==============================================================================
 % math mode commands
+
+% constant symbols
+\NewDocumentCommand\const{m}{\symup{#1}}
+\NewDocumentCommand\e{}{\const{e}}
+\RenewDocumentCommand\i{}{\const{i}}
+\AtBeginDocument{
+  \NewCommandCopy\vpi\pi
+  \RenewDocumentCommand\pi{}{\const{π}}
+  \NewCommandCopy\vtau\tau
+  \RenewDocumentCommand\tau{}{\const{τ}}
+}
+
+% vectors, matrices, tensors
+\NewCommandCopy\arrow\vec
+\AtBeginDocument{
+  \RenewDocumentCommand\vec{m}{\symbf{\MakeLowercase{#1}}}
+}
+\NewDocumentCommand\mat{m}{\symbf{\MakeUppercase{#1}}}
+\NewDocumentCommand\ten{m}{\symbfsf{\MakeUppercase{#1}}}
