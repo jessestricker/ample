@@ -44,5 +44,8 @@
     "--modifyLineBreaks",
     "--cruft=\"%DIR%/.aux/_latexindent\"",
     "%TMPFILE%"
-  ]
+  ],
+  "latex-workshop.bibtex-fields.sort.enabled": true,
+  "latex-workshop.bibtex-format.sort.enabled": true,
+  "latex-workshop.bibtex-format.trailingComma": true
 }
