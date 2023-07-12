@@ -29,3 +29,23 @@
 
 % floats
 \RequirePackage{float}
+
+% colors
+\RequirePackage{xcolor}
+\definecolor{links}{HTML}{0069c2}
+
+% links in PDFs
+\RequirePackage[
+  linktoc=all,
+  colorlinks=true,
+  allcolors=links,
+  bookmarksnumbered=true,
+  pdfdisplaydoctitle=true,
+]{hyperref}
+\AtBeginDocument{
+  \hypersetup{
+    pdftitle=\@title,
+    pdfauthor=\@author,
+    pdfsubject=\@subject,
+  }
+}
