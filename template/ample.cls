@@ -11,7 +11,10 @@
 \ProcessOptions
 
 % load base class
-\LoadClass[12pt,a4paper]{\@ample@BaseClass}
+\LoadClass[
+  fontsize=12pt,
+  toc=bibliography,
+]{\@ample@BaseClass}
 
 % load required packages
 \RequirePackage{template/packages}
