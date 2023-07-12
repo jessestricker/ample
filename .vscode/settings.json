@@ -35,5 +35,13 @@
     "--erroron=16", // error: Mathmode still on at end of LaTeX file.
     "--nowarn=22", // disable: Comment displayed.
     "--nowarn=46" // disable: Use \( ... \) instead of $ ... $.
+  ],
+
+  // formatting
+  "latex-workshop.latexindent.args": [
+    "--yaml=defaultIndent:'%INDENT%',modifyLineBreaks:textWrapOptions:columns:80",
+    "--modifyLineBreaks",
+    "--cruft=\"%DIR%/.aux/_latexindent\"",
+    "%TMPFILE%"
   ]
 }
