@@ -7,6 +7,8 @@ jobs:
   compile:
     name: Compile
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -17,6 +19,12 @@ jobs:
           root_file: root.tex
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
+
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          path: root.pdf
+          name: root.pdf
 
       - name: Release
         uses: softprops/action-gh-release@v1
