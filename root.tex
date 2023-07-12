@@ -8,11 +8,15 @@
 \title{The \emph{ample} template}
 \author{Jesse Stricker}
 
-% ==============================================================================
+% bibliography
+\addbibresource{root.bib}
+
 \begin{document}
 
 \maketitle
 \tableofcontents
+
+% ==============================================================================
 
 \section{Introduction}
 
@@ -21,6 +25,10 @@ Hello, \LaTeX.
 \section{Localization}
 
 Use can use \q{quotation marks} like this and \q{even \q{like} this}.
+
+\section{Citations}
+
+This is an example citation\cite{gunn2019}.
 
 \section{Font test}
 
@@ -65,5 +73,9 @@ font.
 \begin{equation}
   z = 2\e^{(\tau/8)\i} = \sqrt{2} + \sqrt{2}\i
 \end{equation}
+
+% ==============================================================================
+
+\printbibliography[heading=bibintoc]
 
 \end{document}
