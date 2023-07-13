@@ -18,6 +18,11 @@ jobs:
         with:
           packages: scheme-basic
 
+      - name: Install just
+        uses: taiki-e/install-action@v2
+        with:
+          tool: just
+
       - name: Build
         run: just build
 
