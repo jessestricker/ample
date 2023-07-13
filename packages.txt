@@ -1,6 +1,6 @@
 # tools
+collection-luatex
 latexmk
-luatex
 
 # packages
 biblatex
