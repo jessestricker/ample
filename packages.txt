@@ -1,0 +1,18 @@
+# tools
+latexmk
+lualatex
+
+# packages
+biblatex
+blindtext
+booktabs
+csquotes
+float
+hyperref
+libertinus-otf
+minted
+ocgx2
+polyglossia
+scrartcl scrreprt
+unicode-math
+xcolor
