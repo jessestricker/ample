@@ -1,6 +1,6 @@
 # tools
 latexmk
-lualatex
+luatex
 
 # packages
 biblatex
@@ -9,10 +9,10 @@ booktabs
 csquotes
 float
 hyperref
+koma-script
 libertinus-otf
 minted
 ocgx2
 polyglossia
-scrartcl scrreprt
 unicode-math
 xcolor
