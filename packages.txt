@@ -12,9 +12,8 @@ float
 fontspec
 hyperref
 koma-script
-libertine
-libertinus-fonts
 libertinus-otf
+libertinus-fonts
 minted
 ocgx2
 polyglossia
