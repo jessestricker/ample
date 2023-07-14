@@ -13,22 +13,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install TeXLive
-        uses: teatimeguest/setup-texlive-action@v2
+      - name: Compile
+        uses: xu-cheng/latex-action@v2
         with:
-          packages: scheme-basic
-
-      - name: Build
-        run: just build
+          root_file: root.tex
+          latexmk_use_lualatex: true
+          latexmk_shell_escape: true
 
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
-          path: out/root.pdf
+          path: root.pdf
           name: root.pdf
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: out/root.pdf
+          files: root.pdf
           tag_name: "release-${{ github.sha }}"
