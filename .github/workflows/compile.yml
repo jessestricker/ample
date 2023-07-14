@@ -18,7 +18,7 @@ jobs:
         with:
           extra_system_packages: just
           compiler: just
-          args: build
+          args: --verbose build
           root_file: root.tex
 
       - name: Upload
