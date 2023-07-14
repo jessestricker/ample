@@ -13,7 +13,6 @@ fontspec
 hyperref
 koma-script
 libertinus-otf
-libertinus-fonts
 minted
 ocgx2
 polyglossia
