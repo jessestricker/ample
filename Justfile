@@ -7,10 +7,10 @@ LATEXMK_FLAGS := "--Werror"
 LUALATEX_FLAGS := "--c-style-errors --file-line-error --halt-on-error --interaction=nonstopmode --shell-escape --synctex=1"
 
 # Build the root LaTeX file into a PDF file.
-build: (latexmk "")
+build file=SRCFILE: (latexmk "" file)
 
 # Build PDF file (if necessary) and then open it in a PDF viewer.
-view: (latexmk "--pv")
+view file=SRCFILE: (latexmk "--pv" file)
 
 # Delete both the output and auxiliary directories.
 clean: clean-aux clean-out
@@ -24,7 +24,7 @@ clean-out:
     rm --recursive --force -- '{{ OUTDIR }}'
 
 [private]
-latexmk args:
+latexmk args file:
     latexmk {{ args }} --lualatex --auxdir='{{ AUXDIR }}' --outdir='{{ OUTDIR }}' \
         {{ LATEXMK_FLAGS }} {{ LUALATEX_FLAGS }} \
-        '{{ SRCFILE }}'
+        '{{ file }}'
