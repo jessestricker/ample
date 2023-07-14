@@ -24,11 +24,11 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
-          path: root.pdf
+          path: out/root.pdf
           name: root.pdf
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: root.pdf
+          files: out/root.pdf
           tag_name: "release-${{ github.sha }}"
