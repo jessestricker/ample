@@ -1,5 +1,5 @@
 # tools
-collection-latex
+collection-latexrecommended
 collection-luatex
 latexmk
 
