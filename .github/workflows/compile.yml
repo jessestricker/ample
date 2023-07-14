@@ -19,6 +19,7 @@ jobs:
           extra_system_packages: just
           compiler: just
           args: build
+          root_file: " "
 
       - name: Upload
         uses: actions/upload-artifact@v3
