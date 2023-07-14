@@ -1,5 +1,6 @@
 # tools
-scheme-medium
+collection-latexrecommended
+collection-luatex
 latexmk
 
 # packages
