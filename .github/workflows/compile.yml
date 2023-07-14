@@ -16,7 +16,7 @@ jobs:
       - name: Install TeXLive
         uses: teatimeguest/setup-texlive-action@v2
         with:
-          package-file: packages.txt
+          packages: scheme-medium
 
       - name: Install just
         uses: taiki-e/install-action@v2
