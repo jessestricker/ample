@@ -29,6 +29,7 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v1
+        if: ${{ github.ref_name == 'main' }}
         with:
           files: out/root.pdf
           tag_name: "release-${{ github.sha }}"
