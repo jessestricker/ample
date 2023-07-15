@@ -1,6 +1,6 @@
 on:
-  push:
-    branches: [main, ci]
+  push: { branches: [main] }
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -16,18 +16,20 @@ jobs:
       - name: Compile
         uses: xu-cheng/latex-action@v2
         with:
+          extra_system_packages: just
+          compiler: just
+          args: --verbose build
           root_file: root.tex
-          latexmk_use_lualatex: true
-          latexmk_shell_escape: true
 
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
-          path: root.pdf
+          path: out/root.pdf
           name: root.pdf
 
       - name: Release
         uses: softprops/action-gh-release@v1
+        if: ${{ github.ref_name == 'main' }}
         with:
-          files: root.pdf
+          files: out/root.pdf
           tag_name: "release-${{ github.sha }}"
