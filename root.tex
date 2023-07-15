@@ -50,14 +50,19 @@ font.
   \caption{A small Rust code snippet.\label{lst:small-rust}}
 \end{listing}
 
+\section{Units}
+
+You can typeset angles like \ang{45}, numbers like \num{6.283}, units like
+\unit{\kg\m\per\s\squared} and quantities like \qty{1.055e-34}{\J\s}.
+
 \section{Tables}
 
 \begin{table}[H]
   \centering
-  \begin{tabular}{@{}ccc@{}} \toprule
-    Header 1 & Header 2 & Header 3 \\ \midrule
-    Item 1,1 & Item 2,1 & Item 3,1 \\
-    Item 1,2 & Item 2,2 & Item 3,2 \\ \bottomrule
+  \begin{tabular}{@{}cccS@{}} \toprule
+    Header 1 & Header 2 & Header 3 & {Value} \\ \midrule
+    Item 1,1 & Item 2,1 & Item 3,1 & 1.234   \\
+    Item 1,2 & Item 2,2 & Item 3,2 & 12.45   \\ \bottomrule
   \end{tabular}
   \caption{A small table.\label{tab:small}}
 \end{table}
